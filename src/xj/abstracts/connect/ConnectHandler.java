@@ -27,6 +27,7 @@ public abstract class ConnectHandler {
     public ConnectHandler cloneSelf(){
         try {
             Constructor<? extends ConnectHandler> con =  getClass().getDeclaredConstructor();
+
             con.setAccessible(true);
             return con.newInstance();
         } catch (Exception e){
