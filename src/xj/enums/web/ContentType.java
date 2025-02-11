@@ -44,8 +44,16 @@ public enum ContentType {
     // 通过扩展名找到Content-Type，没找到则返回text/plain
     public static String getContentTypeByExtName(String extName) {
         for(ContentType contentType : ContentType.values())
-            if(contentType.extName.equals(extName))
+            if(contentType.extName != null && contentType.extName.equals(extName))
                 return contentType.contentType;
         return TEXT_PLAIN.contentType;
+    }
+
+    // 通过名称找到Content-Type
+    public static ContentType getContentTypeByString(String name) {
+        for(ContentType contentType : ContentType.values())
+            if(contentType.contentType.equals(name))
+                return contentType;
+        return null;
     }
 }

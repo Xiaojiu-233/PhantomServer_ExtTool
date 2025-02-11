@@ -13,12 +13,6 @@ public interface IHttpResponse {
     public void setRespHeaders(String key, String value);
 
     /**
-     * 设置响应数据
-     * @param bodyBytes
-     */
-    public void setBodyBytes(byte[] bodyBytes);
-
-    /**
      * 获取响应参数
      * @param key
      */
