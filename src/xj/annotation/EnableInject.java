@@ -6,10 +6,9 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 服务器MVC框架使用的控制器注解，用于标注该类为控制器层
+ * 这个类将会被注入到IOC容器里
  */
-@EnableInject
-@Target({ElementType.TYPE})
+@Target({ElementType.TYPE, ElementType.ANNOTATION_TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface PController {
+public @interface EnableInject {
 }

@@ -1,5 +1,7 @@
 package xj.interfaces.web;
 
+import xj.entity.web.Cookie;
+
 /**
  * HTTP响应提供的可以用于拓展程序使用的接口
  */
@@ -17,4 +19,9 @@ public interface IHttpResponse {
      * @param key
      */
     public String getHeaderArg(String key);
+
+    /**
+     * 设置Cookie
+     */
+    public void setCookie(Cookie cookie);
 }
