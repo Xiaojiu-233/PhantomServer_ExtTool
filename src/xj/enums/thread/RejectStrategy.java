@@ -1,7 +1,5 @@
 package xj.enums.thread;
 
-import xj.component.log.LogManager;
-
 // 动态线程池对任务的拒绝策略
 public enum RejectStrategy {
 
@@ -13,7 +11,6 @@ public enum RejectStrategy {
         try{
             return RejectStrategy.valueOf(strategy);
         }catch (IllegalArgumentException e){
-            LogManager.error_("获取拒绝策略时出错，已使用默认方案-不执行任务",e);
             return RejectStrategy.THROW_TASK;
         }
     }
