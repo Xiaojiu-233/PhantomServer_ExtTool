@@ -1,15 +1,13 @@
 package xj.entity.web;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.TimeZone;
+import java.util.*;
 
 /**
  * HTTP协议请求和响应使用的Cookie对象，用于存储和使用Cookie
  */
-public class Cookie {
+public class Cookie implements Serializable {
 
     // 成员属性
     private String name;// 名称
@@ -92,7 +90,7 @@ public class Cookie {
     private String getHandledExpires(int seconds){
         long time = System.currentTimeMillis() + (long) seconds * 1000;
         Date date = new Date(time);
-        SimpleDateFormat sdf = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss z");
+        SimpleDateFormat sdf = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss z", Locale.US);
         sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
         return sdf.format(date);
     }
@@ -137,11 +135,11 @@ public class Cookie {
         this.expires = getHandledExpires(expireSeconds);
     }
 
-    public int getMaxAge() {
+    public Integer getMaxAge() {
         return maxAge;
     }
 
-    public void setMaxAge(int maxAgeSeconds) {
+    public void setMaxAge(Integer maxAgeSeconds) {
         this.maxAge = maxAgeSeconds;
     }
 
