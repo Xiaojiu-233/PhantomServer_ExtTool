@@ -1,7 +1,5 @@
 package xj.abstracts.web;
 
-import java.util.Arrays;
-
 // TCP通讯消息请求数据包，提供数据包对象统一抽象类
 public abstract class Request {
 
@@ -14,18 +12,12 @@ public abstract class Request {
 
     // 成员方法
     // 构造方法
-    public Request(byte[] data) {
+    public Request(byte[] data,String headMsg) {
         // 读取数据
         this.data = data;
         lineBreak = null;
-        // 获取头数据（读到换行符之前的数据）
-        int pos = 0;
-        for(int i= 0;i<data.length;i++)
-            if(data[i] == '\n'){
-                pos = i;break;
-            }
-        byte[] headDataBytes = Arrays.copyOfRange(data,0,pos);
-        headMsg = new String(headDataBytes);
+        // 获取头数据
+        this.headMsg = headMsg;
     }
 
     // 将数据编码为字符串数组

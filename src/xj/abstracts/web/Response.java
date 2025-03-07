@@ -1,7 +1,6 @@
 package xj.abstracts.web;
 
 import xj.interfaces.thread.StreamIOTask;
-
 import java.io.IOException;
 import java.nio.channels.SocketChannel;
 
@@ -11,12 +10,15 @@ public abstract class Response {
     // 成员属性
     protected String lineBreak;// 换行符
 
+    protected String unitSplitBreak;// 单元分隔符
+
     protected StreamIOTask ioTask;// 数据流IO线程任务
 
     // 成员方法
     // 构造方法
     public Response() {
         lineBreak = null;
+        unitSplitBreak = null;
     }
 
     // 获取IO线程任务

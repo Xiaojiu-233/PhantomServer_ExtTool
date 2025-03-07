@@ -4,12 +4,18 @@ import xj.interfaces.thread.StreamIOTask;
 
 import java.io.InputStream;
 
-// 线程任务工厂的接口
+/**
+ * 线程任务工厂的接口
+ */
 public interface IThreadTaskFactory {
 
-    // 创建数据流输入IO任务
+    /**
+     * 创建数据流输入IO任务
+     */
     StreamIOTask createStreamInputTask(InputStream in);
 
-    // 创建数据流输出IO任务
+    /**
+     * 创建数据流输出IO任务
+     */
     StreamIOTask createStreamOutputTask(InputStream out,String targetPath);
 }
