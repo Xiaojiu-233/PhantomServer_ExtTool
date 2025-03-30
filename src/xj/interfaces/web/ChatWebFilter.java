@@ -7,4 +7,7 @@ import xj.abstracts.connect.ConnectHandler;
  */
 public interface ChatWebFilter extends WebFilter {
 
+    default Class<? extends ConnectHandler> getBelongConnectHandler(){
+        return null;
+    }
 }
