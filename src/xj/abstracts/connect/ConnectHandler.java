@@ -74,13 +74,7 @@ public abstract class ConnectHandler {
      * 复制自身对象
      */
     public ConnectHandler cloneSelf() {
-        try {
-            Constructor<? extends ConnectHandler> con = getClass().getDeclaredConstructor();
-            con.setAccessible(true);
-            return con.newInstance();
-        } catch (Exception e) {
-            return null;
-        }
+        return null;
     }
 
     /**
@@ -88,12 +82,6 @@ public abstract class ConnectHandler {
      * @param request 请求
      */
     public Response doHandle(Request request) {
-        // 进行过滤器过滤
-        if (!webFilters.isEmpty())
-            for (WebFilter webFilter : webFilters)
-                if (!webFilter.doFilter(request))
-                    return whenException();
-        // 如果所有过滤器通过过滤，执行
-        return handle(request);
+        return null;
     }
 }
