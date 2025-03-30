@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="PhantomServer_ExtTool:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/PhantomServer_ExtTool_jar</output-path>
+    <root id="archive" name="PhantomServer_ExtTool.jar">
+      <element id="module-output" name="PhantomServer_ExtTool" />
+    </root>
+  </artifact>
+</component>

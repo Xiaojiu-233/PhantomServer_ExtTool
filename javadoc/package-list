@@ -1,0 +1,13 @@
+xj.abstracts.connect
+xj.abstracts.thread
+xj.abstracts.web
+xj.annotation
+xj.entity.monitor
+xj.entity.web
+xj.enums.log
+xj.enums.web
+xj.interfaces.component
+xj.interfaces.log
+xj.interfaces.mvc
+xj.interfaces.thread
+xj.interfaces.web
