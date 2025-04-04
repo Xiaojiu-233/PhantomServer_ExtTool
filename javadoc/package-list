@@ -9,5 +9,4 @@ xj.enums.web
 xj.interfaces.component
 xj.interfaces.log
 xj.interfaces.mvc
-xj.interfaces.thread
 xj.interfaces.web
