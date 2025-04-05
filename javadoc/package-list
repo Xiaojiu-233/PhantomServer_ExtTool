@@ -7,6 +7,7 @@ xj.entity.web
 xj.enums.log
 xj.enums.web
 xj.interfaces.component
+xj.interfaces.ioc
 xj.interfaces.log
 xj.interfaces.mvc
 xj.interfaces.web
